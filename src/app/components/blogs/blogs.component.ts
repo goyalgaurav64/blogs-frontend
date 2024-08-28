@@ -22,6 +22,7 @@ export class BlogsComponent implements OnInit {
   blogService = inject(BlogService);
 
   ngOnInit(): void {
+    // GET ALL BLOGS
     debugger
     this.blogService.getAllBlogs().subscribe((response) => {
       this.allBlogs = response;
