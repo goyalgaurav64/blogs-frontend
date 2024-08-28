@@ -1,7 +1,27 @@
-<div class="container flex flex-col justify-center items-center mt-16 px-2">
-  <h1 class="text-4xl font-sans">Explore Variety of Blogs here</h1>
-  <p class="py-6">
-    Here you will find thee blogs related to different topics and you can
-    explore like what's going on around you or the globe.
-  </p>
+<div class="container min-h-screen mt-20">
+  <div class="flex flex-row p-20">
+    <div class="flex-1">
+      <h1 class="text-4xl font-sans font-bold text-end mr-32">Our Blogs</h1>
+    </div>
+    <div class="flex flex-row justify-end">
+      <h2 class="mx-4 mt-2">Filter Blogs By Categories</h2>
+      <div class="dropdown dropdown-hover">
+        <div role="button" class="btn ml-1 border border-blue-500 shadow-2xl">
+          Choose Category
+        </div>
+        <ul
+          class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+        >
+          <li><a>Food</a></li>
+          <li><a>Politics</a></li>
+          <li><a>Travel</a></li>
+          <li><a>Gaming</a></li>
+          <li><a>Technology</a></li>
+          <li><a>Gadgets</a></li>
+          <li><a>Random Blogs</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <app-blogcard [blogs]="allBlogs"></app-blogcard>
 </div>
