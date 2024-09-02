@@ -4,10 +4,7 @@
     class="card h-[400] cursor-pointer hover:bg-gray-200 border rounded-md border-gray-300 shadow-md m-5"
   >
     <figure class="border rounded-md">
-      <img
-        src="https://c0.wallpaperflare.com/preview/72/417/110/beverage-blog-blogger-communication.jpg"
-        alt="Shoes"
-      />
+      <img src="assets/img/blogger.jpg" alt="Shoes" />
     </figure>
     <div class="card-body">
       <h2 class="card-title text-center mx-auto text-2xl font-sans">
@@ -28,15 +25,12 @@
       >
         {{ blog.content }}
       </h1>
-      <div class="grid grid-cols-2 mt-4">
-        <button
-          class="btn btn-primary btn-sm"
-          [routerLink]="'/blog-detail/' + blog.id"
-        >
-          Read more
-        </button>
-        <div class="card-actions ml-6">
-          <div class="badge badge-outline">{{ blog.categoryId }}</div>
+      <div>
+        <button>Hello</button>
+      </div>
+      <div class="card-actions justify-end">
+        <div class="badge badge-outline">
+          {{ getBlogCategory(blog.categoryId) }}
         </div>
       </div>
     </div>

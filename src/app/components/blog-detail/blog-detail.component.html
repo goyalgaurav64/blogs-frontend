@@ -1,21 +1,19 @@
 <div class="min-h-screen mt-20">
   <div class="px-20 flex">
     <div class="h-96 mb-10 mt-52">
-      <img
-        class="h-full"
-        src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?cs=srgb&dl=pexels-pixabay-262508.jpg&fm=jpg"
-        alt=""
-      />
+      <img class="h-full" src="assets/img/blog.jpg" alt="" />
     </div>
+
     <div class="w-full p-10">
       <h1 class="text-center font-sans font-bold text-4xl p-2">
         {{ blog.title | uppercase }}
       </h1>
+      <span class="p-2">{{ getCategoryName() }}</span>
       <h3 class="text-center text-2xl font-semibold font-sans p-5">
         {{ blog.description }}
       </h3>
       <hr />
-      <h5 class="mt-10">{{ blog.content }}</h5>
+      <div class="mt-10" [innerHTML]="blog.content"></div>
       <h5>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero nostrum
         expedita ipsam porro a officiis. Enim libero aut labore totam nam

@@ -2,6 +2,8 @@ import { Component, inject, Input, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
 import { Blogs } from '../../types/blogs';
+import { Categories } from '../../types/categories';
+import { CategoryService } from '../../services/category.service';
 
 @Component({
   selector: 'app-blogcard',
@@ -16,5 +18,16 @@ export class BlogcardComponent implements OnInit {
   router = inject(Router);
   blogService = inject(BlogService);
 
-  ngOnInit(): void {}
+  categoriesList : Categories[] = [];
+  categoryService = inject(CategoryService);
+
+  ngOnInit(): void {
+    this.categoryService.getCategoryList().subscribe((response) => {
+      this.categoriesList = response;
+    });
+  }
+
+  getBlogCategory(blogCategoryId:number){
+    return this.categoriesList.find(cat => cat.id == blogCategoryId)?.name;
+  }
 }
