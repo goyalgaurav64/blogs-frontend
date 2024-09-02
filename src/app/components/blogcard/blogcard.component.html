@@ -2,6 +2,7 @@
   @for(blog of blogs; track blog.id){
   <div
     class="card h-[400] cursor-pointer hover:bg-gray-200 border rounded-md border-gray-300 shadow-md m-5"
+    [routerLink]="'/blog-detail/' + blog.id"
   >
     <figure class="border rounded-md">
       <img src="assets/img/blogger.jpg" alt="Shoes" />
@@ -25,9 +26,6 @@
       >
         {{ blog.content }}
       </h1>
-      <div>
-        <button>Hello</button>
-      </div>
       <div class="card-actions justify-end">
         <div class="badge badge-outline">
           {{ getBlogCategory(blog.categoryId) }}
