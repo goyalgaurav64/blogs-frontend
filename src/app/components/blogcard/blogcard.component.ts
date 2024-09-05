@@ -13,6 +13,7 @@ import { CategoryService } from '../../services/category.service';
   styleUrl: './blogcard.component.css',
 })
 export class BlogcardComponent implements OnInit {
+  color='accent'
   @Input() blogs!: Blogs[];
 
   router = inject(Router);
