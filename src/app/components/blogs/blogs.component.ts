@@ -23,7 +23,7 @@ export class BlogsComponent implements OnInit {
 
   ngOnInit(): void {
     // GET ALL BLOGS
-    debugger
+    
     this.blogService.getAllBlogs().subscribe((response) => {
       this.allBlogs = response;
       console.log(this.allBlogs);

@@ -14,7 +14,7 @@
       </div>
     </div>
   </div>
-  @if(featuredBlogs.length > 0){
+  @if(featuredBlogs && featuredBlogs.length > 0){
   <div class="featured-container w-full">
     <h1 class="font-sans font-bold text-4xl text-center">Featured Blogs</h1>
     <app-blogcard [blogs]="featuredBlogs"></app-blogcard>

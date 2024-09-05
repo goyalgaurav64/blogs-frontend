@@ -5,6 +5,7 @@ import { BlogsComponent } from './components/blogs/blogs.component';
 import { BlogDetailComponent } from './components/blog-detail/blog-detail.component';
 import { SendMessageComponent } from './components/send-message/send-message.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { CreateComponent } from './components/create/create.component';
 
 export const routes: Routes = [
   {
@@ -30,5 +31,9 @@ export const routes: Routes = [
   {
     path: 'contact-us',
     component: ContactUsComponent,
+  },
+  {
+    path: 'create-blog',
+    component: CreateComponent,
   },
 ];
